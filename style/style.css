@@ -150,6 +150,12 @@ body {
     font-weight: lighter;
     margin-bottom: 20px; }
 
+.tips {
+  font-size: 12px;
+  margin-top: 20px;
+  color: #673AB7;
+  letter-spacing: 4px; }
+
 @media (max-width: 768px) {
   body {
     background-size: 60%;

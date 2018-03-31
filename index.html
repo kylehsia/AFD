@@ -30,8 +30,8 @@
 		</div>
 		<div class="content">
 			<div class="content__intro">
-				<p class="description">登入臉書，輸入好友名稱<br>讓他臉書停擺一段時間</p>
-				<button class="btn" id="login">登入你的臉書</button>
+				<p class="description">登入臉書，輸入好友名稱<br>讓他臉書停擺(斷線)一段時間</p>
+				<button class="btn" id="login">登入臉書</button>
 			</div>
 			<div class="content__form" style="display: none;">
 				<div class="form-group">
@@ -45,15 +45,16 @@
 				<div class="form-group">
 					<label class="label-control">停擺時間</label>
 					<select class="select-control">
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
+						<option value="1">1小時</option>
+						<option value="2">2小時</option>
+						<option value="3">3小時</option>
+						<option value="4">4小時</option>
+						<option value="5">5小時</option>
+						<option value="6">6小時</option>
 					</select>
 				</div>
-				<button class="btn btn--sp" onclick="setURL()">斷他</button>
+				<button class="btn btn--sp" onclick="setURL()">送出</button>
+				<div class="tips">提醒：送出後對方臉書會斷線你所設定的時間</div>
 			</div>
 		</div>
 	</div>
