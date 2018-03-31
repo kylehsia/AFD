@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Let him/her down - 愚人節遊戲</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i" rel="stylesheet">
+    <link href="style/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="kv">
+			<h1>LET<br>HIM/HER<br>DOWN</h1>
+		</div>
+		<div class="content">
+			<div class="content__intro">
+				<p class="description">登入臉書，輸入好友名稱<br>讓他臉書停擺一段時間</p>
+				<button class="btn" id="login">登入你的臉書</button>
+			</div>
+			<div class="content__form" style="display: none;">
+				<div class="form-group">
+					<label for="ur-name" class="label-control">你的名稱</label>
+					<input type="text" name="ur-name" id="ur-name" class="input-control">
+				</div>
+				<div class="form-group">
+					<label for="fd-name" class="label-control">好友名稱</label>
+					<input type="text" name="fd-name" id="fd-name" class="input-control">
+				</div>
+				<div class="form-group">
+					<label class="label-control">停擺時間</label>
+					<select class="select-control">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+					</select>
+				</div>
+				<button class="btn btn--sp" onclick="setURL()">斷他</button>
+			</div>
+		</div>
+	</div>
+
+    <iframe id="gform" style="display: none;" onload="this.onload=function(){window.location='result.html'}"></iframe>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        function setURL(){
+        	var A1 = document.getElementById('ur-name').value;
+	        var A2 = document.getElementById('fd-name').value;
+		    document.getElementById('gform').src = "https://docs.google.com/forms/d/e/1FAIpQLSe2EoDr-okusBoWxz8_gmM5oRaGzX1lz1B04HM5EQtAUX-ReQ/formResponse?entry.529607084=" + A1 + "&" + "entry.1629571125=" + A2;
+		}
+
+		$(document).ready(function(){
+		    $("#login").click(function(){
+		        $(this).addClass('active');
+		        $('.content__intro').delay(3000).fadeOut();
+		        $('.content__form').delay(3500).fadeIn();
+		    });
+		});
+    </script>
+</body>
+</html>
