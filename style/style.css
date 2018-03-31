@@ -31,7 +31,8 @@ html, body {
     line-height: 140%;
     margin: 0;
     font-weight: 300;
-    margin-top: -15%; }
+    margin-top: -15%;
+    font-style: italic; }
 
 .content {
   height: 100vh;
