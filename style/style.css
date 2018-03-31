@@ -10,6 +10,16 @@ html, body {
   font-family: 微軟正黑體, "Microsoft JhengHei", sans-serif;
   font-size: 18px; }
 
+body {
+  background: transparent url("../images/bg.svg") left top repeat;
+  background-size: 30%;
+  animation: bg 80s infinite alternate linear; }
+
+@keyframes bg {
+  from {
+    background-position: left top; }
+  to {
+    background-position: right bottom; } }
 .kv {
   width: 40%;
   height: 100vh;
@@ -141,6 +151,10 @@ html, body {
     margin-bottom: 20px; }
 
 @media (max-width: 768px) {
+  body {
+    background-size: 60%;
+    animation-duration: 10s; }
+
   .kv {
     width: 100%;
     height: auto;

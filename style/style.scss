@@ -11,6 +11,17 @@ html, body {
 	font-size: 18px;
 }
 
+body {
+	background:transparent url('../images/bg.svg') left top repeat;
+	background-size: 30%;
+	animation: bg 80s infinite alternate linear;
+}
+
+@keyframes bg {
+	from { background-position: left top; }
+	to { background-position: right bottom; }
+}
+
 $kv-size: 40%;
 
 .kv {
@@ -166,6 +177,10 @@ $btn-color: #50E3C2;
 }
 
 @media (max-width: 768px) {
+	body {
+		background-size: 60%;
+		animation-duration: 10s;
+	}
 	.kv {
 		width: 100%;
 		height: auto;
